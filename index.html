@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hadith Library | Explore and Learn</title>
+
+    <meta name="description"
+        content="Explore Hadith collections and build your knowledge through a digital Hadith library.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-symbol">۞</span>
+            <span>Hadith Library</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#collections" class="nav-button">
+            Explore Library
+        </a>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    YOUR DIGITAL HADITH LIBRARY
+                </span>
+
+                <h1>
+                    Discover, study and
+                    <span>preserve</span> the Sunnah.
+                </h1>
+
+                <p class="hero-description">
+                    Explore the collections of Hadith, study their
+                    meanings and build a lasting connection with
+                    the teachings of Prophet Muhammad ﷺ.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#collections" class="primary-button">
+                        Explore Collections →
+                    </a>
+
+                    <a href="#about" class="secondary-button">
+                        About the project
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="decoration-circle">
+                    <span>ﷺ</span>
+                    <p>Knowledge · Study · Reflection</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH SECTION -->
+        <section class="search-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">FIND WHAT YOU'RE LOOKING FOR</span>
+                <h2>Search the library</h2>
+                <p>Explore Hadith collections by their name or description.</p>
+            </div>
+
+            <div class="search-container">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="search"
+                    id="collectionSearch"
+                    placeholder="Search collections..."
+                    aria-label="Search Hadith collections"
+                >
+
+                <button id="clearSearch" type="button">
+                    Clear
+                </button>
+            </div>
+
+            <p id="searchStatus" class="search-status" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- COLLECTIONS SECTION -->
+        <section class="collections-section" id="collections">
+
+            <div class="collections-heading">
+                <div>
+                    <span class="eyebrow">THE HADITH LIBRARY</span>
+                    <h2>Explore collections</h2>
+                    <p>Browse some of the major Hadith collections.</p>
+                </div>
+
+                <span class="collection-count" id="collectionCount">
+                    6 collections
+                </span>
+            </div>
+
+
+            <div class="collection-grid" id="collectionGrid">
+
+                <article class="collection-card"
+                    data-search="sahih bukhari muhammad ibn ismail">
+
+                    <span class="card-number">01</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Sahih al-Bukhari</h3>
+
+                    <p>
+                        A major collection of Hadith compiled by
+                        Imam Muhammad ibn Ismail al-Bukhari.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+
+                <article class="collection-card"
+                    data-search="sahih muslim muslim ibn al hajjaj">
+
+                    <span class="card-number">02</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Sahih Muslim</h3>
+
+                    <p>
+                        The renowned Hadith collection compiled by
+                        Imam Muslim ibn al-Hajjaj.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+
+                <article class="collection-card"
+                    data-search="sunan abu dawud">
+
+                    <span class="card-number">03</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Sunan Abu Dawud</h3>
+
+                    <p>
+                        A major collection compiled by Imam
+                        Abu Dawud, with substantial coverage of
+                        Hadith relating to Islamic rulings.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+
+                <article class="collection-card"
+                    data-search="jami tirmidhi at tirmidhi">
+
+                    <span class="card-number">04</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Jami' at-Tirmidhi</h3>
+
+                    <p>
+                        A Hadith collection compiled by
+                        Imam Muhammad ibn Isa at-Tirmidhi.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+
+                <article class="collection-card"
+                    data-search="sunan an nasai nasai">
+
+                    <span class="card-number">05</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Sunan an-Nasa'i</h3>
+
+                    <p>
+                        A major Hadith collection compiled by
+                        Imam Ahmad ibn Shu'ayb an-Nasa'i.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+
+                <article class="collection-card"
+                    data-search="sunan ibn majah majah">
+
+                    <span class="card-number">06</span>
+                    <span class="card-symbol">۞</span>
+
+                    <h3>Sunan Ibn Majah</h3>
+
+                    <p>
+                        A Hadith collection compiled by
+                        Imam Ibn Majah.
+                    </p>
+
+                    <span class="card-link">Explore collection →</span>
+
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>
+                No collections found. Try another search.
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+
+            <div class="about-content">
+                <span class="eyebrow">ABOUT THE PROJECT</span>
+
+                <h2>A library built for learning.</h2>
+
+                <p>
+                    Our aim is to create a digital space where
+                    students can explore Hadith literature,
+                    organise their studies and develop their
+                    memorisation.
+                </p>
+
+                <a href="#collections" class="primary-button">
+                    Start exploring →
+                </a>
+            </div>
+
+            <div class="about-arabic">
+                <span>طَلَبُ الْعِلْمِ</span>
+                <p>Seeking knowledge</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="#" class="logo footer-logo">
+            <span class="logo-symbol">۞</span>
+            <span>Hadith Library</span>
+        </a>
+
+        <p>
+            A project dedicated to studying and preserving
+            Hadith knowledge.
+        </p>
+
+        <span class="copyright">
+            © 2026 Hadith Library. An independent educational project.
+        </span>
+
+    </footer>
+
+
+    <!-- Our JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

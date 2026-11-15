@@ -1,0 +1,545 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+:root {
+    --green: #193D2B;
+    --green-light: #28553D;
+    --cream: #F7F5EF;
+    --white: #FFFFFF;
+    --gold: #B99A60;
+    --text: #25352C;
+    --muted: #777F76;
+    --border: #E8E4D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   2. NAVIGATION
+========================================= */
+
+.navbar {
+    height: 82px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.logo-symbol {
+    color: var(--gold);
+    font-size: 29px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green);
+}
+
+.nav-button {
+    background: var(--green);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: var(--green-light);
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 490px;
+    background: var(--green);
+    color: var(--cream);
+    padding: 85px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 17px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    font-weight: 600;
+    margin-bottom: 23px;
+}
+
+.hero h1 span {
+    color: #D5B77C;
+}
+
+.hero-description {
+    max-width: 530px;
+    color: #D5DDD5;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.primary-button {
+    background: var(--gold);
+    color: #172B20;
+}
+
+.primary-button:hover {
+    background: #D0B77E;
+}
+
+.secondary-button {
+    border: 1px solid #829386;
+    color: white;
+}
+
+.secondary-button:hover {
+    background: #28553D;
+}
+
+.hero-decoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 280px;
+}
+
+.decoration-circle {
+    width: 265px;
+    height: 265px;
+    border: 1px solid rgba(213, 183, 124, 0.55);
+    outline: 1px solid rgba(213, 183, 124, 0.2);
+    outline-offset: 12px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.decoration-circle span {
+    font-family: "Amiri", serif;
+    color: #D5B77C;
+    font-size: 100px;
+}
+
+.decoration-circle p {
+    font-size: 10px;
+    color: #D5DDD5;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   4. SEARCH SECTION
+========================================= */
+
+.search-section {
+    padding: 85px 10% 65px;
+    text-align: center;
+}
+
+.section-heading h2,
+.collections-heading h2 {
+    font-size: 32px;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.section-heading p,
+.collections-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.search-container {
+    max-width: 650px;
+    height: 58px;
+    margin: 30px auto 0;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    gap: 12px;
+}
+
+.search-container:focus-within {
+    border-color: var(--gold);
+}
+
+.search-icon {
+    font-size: 26px;
+    color: var(--gold);
+}
+
+.search-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    min-width: 0;
+}
+
+.search-container button {
+    border: none;
+    background: transparent;
+    color: var(--green);
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-status {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 12px;
+    min-height: 18px;
+}
+
+
+/* =========================================
+   5. COLLECTIONS
+========================================= */
+
+.collections-section {
+    padding: 40px 10% 100px;
+}
+
+.collections-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+    gap: 20px;
+}
+
+.collection-count {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 13px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.collection-card {
+    position: relative;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 29px 25px;
+    min-height: 255px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(25, 61, 43, 0.08);
+}
+
+.card-number {
+    position: absolute;
+    right: 22px;
+    top: 18px;
+    color: #C6C6B9;
+    font-size: 12px;
+}
+
+.card-symbol {
+    color: var(--gold);
+    font-size: 27px;
+}
+
+.collection-card h3 {
+    color: var(--green);
+    font-size: 19px;
+    margin: 18px 0 10px;
+}
+
+.collection-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.no-results {
+    text-align: center;
+    color: var(--muted);
+    padding: 35px;
+}
+
+
+/* =========================================
+   6. ABOUT SECTION
+========================================= */
+
+.about-section {
+    background: #EDEBE1;
+    padding: 85px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-content {
+    max-width: 560px;
+}
+
+.about-content h2 {
+    color: var(--green);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 27px;
+}
+
+.about-arabic {
+    text-align: center;
+    color: var(--green);
+}
+
+.about-arabic span {
+    font-family: "Amiri", serif;
+    font-size: 52px;
+}
+
+.about-arabic p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   7. FOOTER
+========================================= */
+
+.footer {
+    background: #142F21;
+    color: #D5DDD5;
+    padding: 45px 10%;
+    text-align: center;
+}
+
+.footer-logo {
+    justify-content: center;
+    color: white;
+}
+
+.footer > p {
+    font-size: 12px;
+    color: #AAB9AD;
+    margin: 15px 0 25px;
+}
+
+.copyright {
+    color: #8E9E91;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   8. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero-decoration {
+        min-width: 180px;
+    }
+
+    .decoration-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .decoration-circle span {
+        font-size: 70px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        border-top: 1px solid var(--border);
+        padding-top: 14px;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .search-section {
+        padding: 65px 7% 45px;
+    }
+
+    .collections-section {
+        padding: 35px 7% 65px;
+    }
+
+    .collections-heading {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        padding: 65px 7%;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .about-arabic {
+        align-self: center;
+    }
+
+}
